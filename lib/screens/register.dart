@@ -4,18 +4,19 @@ import 'package:nothing/assets/const/theme.dart';
 import 'package:nothing/assets/theme.dart';
 import 'package:nothing/widgets/textbox.dart';
 
-class Login extends StatefulWidget {
-  Login({super.key});
+class Register extends StatefulWidget {
+  Register({super.key});
   late darkmode theme = darkmode();
   late FontFamily font = FontFamily();
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
+  TextEditingController email = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -34,6 +35,17 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   child: Column(
                     children: [
+                      Padding(
+                          padding: const EdgeInsets.only(
+                              left: 36, right: 36, top: 19),
+                          child: TextBox(
+                            textEditingController: email,
+                            hintText: "email id",
+                            theme: widget.theme,
+                            font: widget.font,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                          )),
                       Padding(
                           padding: const EdgeInsets.only(
                               left: 36, right: 36, top: 19),
@@ -71,7 +83,7 @@ class _LoginState extends State<Login> {
                             padding: const EdgeInsets.only(
                                 top: 7, bottom: 7, right: 53, left: 53),
                             child: Text(
-                              "LOGIN",
+                              "REGISTER",
                               style: widget.font.getPromptTextStyle(
                                   color: widget.theme.textcolor,
                                   fontSize: 14,
@@ -87,7 +99,7 @@ class _LoginState extends State<Login> {
                             onPressed: () {},
                             style: TextButton.styleFrom(
                                 splashFactory: NoSplash.splashFactory),
-                            child: Text("New to Nothing?",
+                            child: Text("Already have an account?",
                                 style: widget.font.getPromptTextStyle(
                                     color: widget.theme.textcolor,
                                     fontSize: 10,
