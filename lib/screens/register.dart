@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nothing/assets/const/font.dart';
 import 'package:nothing/assets/const/theme.dart';
 import 'package:nothing/assets/theme.dart';
+import 'package:nothing/widgets/button.dart';
 import 'package:nothing/widgets/textbox.dart';
 
 class Register extends StatefulWidget {
@@ -70,29 +71,18 @@ class _RegisterState extends State<Register> {
                             passwordIcon: true,
                           )),
                       Padding(
-                        padding: const EdgeInsets.only(top: 32),
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: widget.theme.button,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(350),
-                            ),
-                          ),
-                          onPressed: () {},
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                top: 7, bottom: 7, right: 53, left: 53),
-                            child: Text(
-                              "REGISTER",
-                              style: widget.font.getPromptTextStyle(
-                                  color: widget.theme.textcolor,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  letterSpacing: 0),
-                            ),
-                          ),
-                        ),
-                      ),
+                          padding: const EdgeInsets.only(top: 32),
+                          child: Button(
+                            theme: widget.theme,
+                            font: widget.font,
+                            horizontalpadding: 44,
+                            verticalpadding: 7,
+                            text: "Register",
+                            radius: 350,
+                            fontsize: 14,
+                            fontweight: FontWeight.w400,
+                            onPressed: () {},
+                          )),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 24),
                         child: TextButton(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nothing/screens/login.dart';
+import 'package:nothing/screens/profile.dart';
 import 'package:nothing/screens/register.dart';
 
 void main() {
