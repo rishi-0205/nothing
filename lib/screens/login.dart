@@ -61,6 +61,7 @@ class _LoginState extends State<Login> {
                       Padding(
                           padding: const EdgeInsets.only(top: 32),
                           child: Button(
+                            bgcolor: widget.theme.button,
                             theme: widget.theme,
                             font: widget.font,
                             horizontalpadding: 53,

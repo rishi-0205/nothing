@@ -13,7 +13,8 @@ class Button extends StatefulWidget {
       required this.radius,
       required this.fontsize,
       required this.fontweight,
-      required this.onPressed});
+      required this.onPressed,
+      required this.bgcolor});
   darkmode theme;
   FontFamily font;
   String text;
@@ -22,6 +23,7 @@ class Button extends StatefulWidget {
   double radius;
   double fontsize;
   FontWeight fontweight;
+  Color bgcolor;
   VoidCallback onPressed;
 
   @override
@@ -33,7 +35,7 @@ class _ButtonState extends State<Button> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: widget.theme.button,
+        backgroundColor: widget.bgcolor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(widget.radius),
         ),

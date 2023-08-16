@@ -4,6 +4,7 @@ import 'package:nothing/screens/profile.dart';
 import 'package:nothing/screens/register.dart';
 
 void main() {
+  debugProfileBuildsEnabled = false;
   runApp(const MyApp());
 }
 
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Register());
+    return MaterialApp(home: Profile());
   }
 }
