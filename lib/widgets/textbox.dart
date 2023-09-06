@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nothing/assets/const/font.dart';
-import 'package:nothing/assets/theme.dart';
+import 'package:nothing/assets/const/theme.dart';
 
 class TextBox extends StatefulWidget {
   TextBox(

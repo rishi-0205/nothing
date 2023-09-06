@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nothing/assets/const/font.dart';
-import 'package:nothing/assets/theme.dart';
+import 'package:nothing/assets/const/theme.dart';
 import 'package:nothing/widgets/button.dart';
 import 'package:nothing/widgets/profilephoto.dart';
 
