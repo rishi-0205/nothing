@@ -13,7 +13,7 @@ class Task {
 
   String name;
   String description;
-  int percentage;
+  double percentage;
   DateTime deadline = DateTime(0, 0, 0);
   bool todays_status;
   bool deleted;

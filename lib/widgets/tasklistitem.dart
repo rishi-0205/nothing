@@ -22,40 +22,48 @@ class TaskListItem extends StatefulWidget {
 class _TaskListItemState extends State<TaskListItem> {
   bool _isDone = false;
   void _toggleStatus() {
-    widget.status = !widget.status;
+    setState(() {
+      widget.status = !widget.status;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: widget.theme.containerbg1,
-        borderRadius: BorderRadius.all(Radius.circular(5)),
-      ),
-      child: Row(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(top: 13, bottom: 13, left: 23, right: 11),
-            child: IconButton(
-              //TRY THIS WITH CHECKBOX WIDGET
-              icon: Icon(
-                widget.status
-                    ? Icons.check_box_outline_blank
-                    : Icons.check_box_outlined,
-                color: widget.theme.checkbox,
+    return Padding(
+      padding: EdgeInsets.only(bottom: 10, right: 15, left: 15),
+      child: Container(
+        decoration: BoxDecoration(
+          color: widget.theme.containerbg1,
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+        ),
+        child: Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 8, bottom: 8, left: 23, right: 11),
+              child: IconButton(
+                splashRadius: 1,
+                padding: EdgeInsets.all(0),
+                //TRY THIS WITH CHECKBOX WIDGET
+                icon: Icon(
+                  widget.status
+                      ? Icons.check_box_outlined
+                      : Icons.check_box_outline_blank,
+                  color: widget.theme.checkbox,
+                  size: 32,
+                ),
+                onPressed: _toggleStatus,
               ),
-              onPressed: _toggleStatus,
             ),
-          ),
-          Text(
-            widget.taskname,
-            style: widget.font.getPromptTextStyle(
-                color: widget.theme.textcolor,
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                letterSpacing: 0),
-          )
-        ],
+            Text(
+              widget.taskname,
+              style: widget.font.getPromptTextStyle(
+                  color: widget.theme.textcolor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0),
+            )
+          ],
+        ),
       ),
     );
   }
