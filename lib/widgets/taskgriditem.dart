@@ -37,29 +37,29 @@ class _TaskGridItemState extends State<TaskGridItem> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 5, right: 22),
+              padding: const EdgeInsets.only(top: 5, right: 20),
               child: Text(
                 widget.taskname,
                 style: widget.font.getPromptTextStyle(
                     color: widget.theme.textcolor,
-                    fontSize: 14,
+                    fontSize: 16,
                     fontWeight: FontWeight.w700,
                     letterSpacing: 0),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 14, right: 27),
+              padding: const EdgeInsets.only(top: 14, right: 25),
               child: Text(
                 "Description:",
                 style: widget.font.getPromptTextStyle(
                     color: widget.theme.textcolor,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
                     letterSpacing: 0),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 27),
+              padding: const EdgeInsets.only(right: 25),
               child: Text(
                 widget.description,
                 style: widget.font.getPromptTextStyle(
@@ -70,7 +70,7 @@ class _TaskGridItemState extends State<TaskGridItem> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 33, right: 14),
+              padding: const EdgeInsets.only(top: 33, right: 12),
               child: LinearProgressIndicator(
                 backgroundColor: widget.theme.progressempty,
                 color: widget.theme.progressfill,
@@ -81,7 +81,7 @@ class _TaskGridItemState extends State<TaskGridItem> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 60),
+                  padding: const EdgeInsets.only(right: 58),
                   child: Text("Progress",
                       style: widget.font.getPromptTextStyle(
                           color: widget.theme.textcolor,
