@@ -11,6 +11,8 @@ class TextBox extends StatefulWidget {
       required this.font,
       this.readOnly = false,
       this.currency = false,
+      this.maxlines = 1,
+      this.obsecure = false,
       required this.fontSize,
       required this.fontWeight,
       this.passwordIcon = false});
@@ -24,13 +26,15 @@ class TextBox extends StatefulWidget {
   bool currency;
   FontWeight fontWeight;
   bool passwordIcon;
+  int maxlines;
+  bool obsecure;
 
   @override
   State<TextBox> createState() => _TextBoxState();
 }
 
 class _TextBoxState extends State<TextBox> {
-  bool _isPasswordVisible = true;
+  bool _isPasswordVisible = false;
 
   void _togglePasswordVisibility() {
     setState(() {
@@ -47,7 +51,8 @@ class _TextBoxState extends State<TextBox> {
         ),
       ),
       child: TextField(
-        obscureText: _isPasswordVisible,
+        maxLines: widget.maxlines,
+        obscureText: widget.passwordIcon ? _isPasswordVisible : false,
         style: TextStyle(color: widget.theme.textcolor),
         decoration: InputDecoration(
           hintText: widget.hintText,
@@ -62,8 +67,8 @@ class _TextBoxState extends State<TextBox> {
               ? IconButton(
                   icon: Icon(
                     _isPasswordVisible
-                        ? Icons.visibility_off
-                        : Icons.visibility,
+                        ? Icons.visibility
+                        : Icons.visibility_off,
                     color: widget.theme.hinttext,
                   ),
                   onPressed: _togglePasswordVisibility,

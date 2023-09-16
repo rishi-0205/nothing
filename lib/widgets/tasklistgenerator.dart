@@ -24,4 +24,40 @@ class TasklistGenerator {
     }
     return columnChildren;
   }
+
+  List<Widget> generateCompletedTasks(
+      User currentuser, darkmode theme, FontFamily font) {
+    List<Widget> columnChildren = [];
+    for (int i = 0; i < currentuser.all_task.length; i++) {
+      if (currentuser.all_task[i].completed == true &&
+          currentuser.all_task[i].deleted == false) {
+        columnChildren.add(TaskListItem(
+            theme: theme,
+            font: font,
+            status: currentuser.all_task[i].todays_status,
+            taskname: currentuser.all_task[i].name));
+      } else {
+        continue;
+      }
+    }
+    return columnChildren;
+  }
+
+  List<Widget> generateDeletedTasks(
+      User currentuser, darkmode theme, FontFamily font) {
+    List<Widget> columnChildren = [];
+    for (int i = 0; i < currentuser.all_task.length; i++) {
+      if (currentuser.all_task[i].completed == false &&
+          currentuser.all_task[i].deleted == true) {
+        columnChildren.add(TaskListItem(
+            theme: theme,
+            font: font,
+            status: currentuser.all_task[i].todays_status,
+            taskname: currentuser.all_task[i].name));
+      } else {
+        continue;
+      }
+    }
+    return columnChildren;
+  }
 }
