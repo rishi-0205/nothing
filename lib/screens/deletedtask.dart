@@ -12,29 +12,29 @@ class DeletedTasks extends StatefulWidget {
   TasklistGenerator tg = TasklistGenerator();
   List<Task> alltask = [
     Task(
-        name: "Leetcode",
-        todays_status: false,
-        deleted: false,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Leetcode",
+      todays_status: false,
+      deleted: false,
+      deadline: DateTime(9, 9, 9),
+    ),
     Task(
-        name: "Data Structures",
-        todays_status: false,
-        deleted: true,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Data Structures",
+      todays_status: false,
+      deleted: true,
+      deadline: DateTime(9, 9, 9),
+    ),
     Task(
-        name: "Algorithms",
-        todays_status: false,
-        deleted: true,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Algorithms",
+      todays_status: false,
+      deleted: true,
+      deadline: DateTime(9, 9, 9),
+    ),
     Task(
-        name: "Codewars",
-        todays_status: false,
-        deleted: false,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Codewars",
+      todays_status: false,
+      deleted: false,
+      deadline: DateTime(9, 9, 9),
+    ),
   ];
 
   @override

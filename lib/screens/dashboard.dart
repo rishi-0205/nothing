@@ -15,42 +15,42 @@ class DashBoard extends StatefulWidget {
   late FontFamily font = FontFamily();
   List<Task> alltask = [
     Task(
-        name: "Leetcode",
-        description: "Solve 3 Problems on leetcode everyday",
-        todays_status: false,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Leetcode",
+      description: "Solve 3 Problems on leetcode everyday",
+      todays_status: false,
+      deadline: DateTime(9, 9, 9),
+    ),
     Task(
-        name: "Data Structures",
-        description:
-            "Learn one data structure everday and writes its implementation",
-        todays_status: false,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Data Structures",
+      description:
+          "Learn one data structure everday and writes its implementation",
+      todays_status: false,
+      deadline: DateTime(9, 9, 9),
+    ),
     Task(
-        name: "Algorithms",
-        description: "Learn one algorithm Everyday",
-        todays_status: false,
-        deadline: DateTime(9, 9, 9),
-        history: []),
+      name: "Algorithms",
+      description: "Learn one algorithm Everyday",
+      todays_status: false,
+      deadline: DateTime(9, 9, 9),
+    ),
     Task(
-        name: "Codewars",
-        description: "Solve problems on codewars",
-        todays_status: false,
-        deadline: DateTime(9, 10, 9),
-        history: []),
+      name: "Codewars",
+      description: "Solve problems on codewars",
+      todays_status: false,
+      deadline: DateTime(9, 10, 9),
+    ),
     Task(
-        name: "Codewars",
-        description: "Solve problems on codewars",
-        todays_status: false,
-        deadline: DateTime(9, 12, 9),
-        history: []),
+      name: "Codewars",
+      description: "Solve problems on codewars",
+      todays_status: false,
+      deadline: DateTime(9, 12, 9),
+    ),
     Task(
-        name: "Codewars",
-        description: "Solve problems on codewars",
-        todays_status: false,
-        deadline: DateTime(9, 13, 9),
-        history: []),
+      name: "Codewars",
+      description: "Solve problems on codewars",
+      todays_status: false,
+      deadline: DateTime(9, 13, 9),
+    ),
   ];
 
   @override

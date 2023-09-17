@@ -34,7 +34,7 @@ class TextBox extends StatefulWidget {
 }
 
 class _TextBoxState extends State<TextBox> {
-  bool _isPasswordVisible = false;
+  bool _isPasswordVisible = true;
 
   void _togglePasswordVisibility() {
     setState(() {

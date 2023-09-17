@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:nothing/assets/const/font.dart';
 import 'package:nothing/assets/const/theme.dart';
-import 'package:nothing/model/DaysCompleted.dart';
 import 'package:nothing/model/user.dart';
 import 'package:nothing/widgets/tasklistitem.dart';
 
