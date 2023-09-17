@@ -32,11 +32,3 @@ class _TaskGridState extends State<TaskGrid> {
             childAspectRatio: 0.66));
   }
 }
-
-// GridView.count(
-//         crossAxisSpacing: 16,
-//         mainAxisSpacing: 10,
-//         crossAxisCount: 2,
-//         childAspectRatio: 0.66,
-//         children: widget.tg
-//             .generateGrid(widget.currentuser, widget.theme, widget.font));

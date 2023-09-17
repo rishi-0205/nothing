@@ -43,7 +43,6 @@ class _TaskListItemState extends State<TaskListItem> {
               child: IconButton(
                 splashRadius: 1,
                 padding: EdgeInsets.all(0),
-                //TRY THIS WITH CHECKBOX WIDGET
                 icon: Icon(
                   widget.status
                       ? Icons.check_box_outlined

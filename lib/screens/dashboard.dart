@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:nothing/assets/const/font.dart';
 import 'package:nothing/assets/const/theme.dart';
 import 'package:nothing/model/Task.dart';
 import 'package:nothing/model/user.dart';
-import 'package:nothing/widgets/circularindicator.dart';
 import 'package:nothing/widgets/overallprogresscontainer.dart';
-import 'package:nothing/widgets/taskgrid.dart';
 import 'package:nothing/widgets/taskgridgenerator.dart';
 
 class DashBoard extends StatefulWidget {
@@ -100,22 +97,3 @@ class _DashBoardState extends State<DashBoard> {
         ]));
   }
 }
-
-// Padding(
-//   padding: EdgeInsets.only(top: 26),
-//   child: TaskGrid(
-//       theme: widget.theme,
-//       font: widget.font,
-//       currentuser: widget.currentuser),
-// ),
-
-// SliverToBoxAdapter(
-
-//             child: OverallProgress(
-//                 theme: widget.theme,
-//                 font: widget.font,
-//                 currentuser: currentuser),
-//           ),
-//           SliverPadding(padding: EdgeInsets.only(bottom: 26)),
-//           TaskGrid(
-//               theme: widget.theme, font: widget.font, currentuser: currentuser),
